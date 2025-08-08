@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏官网</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-image: url('背景.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* 背景遮罩，提高文字可读性 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(162, 161, 161, 0);
+            z-index: -1;
+        }
+
+        header {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(137, 137, 137, 0.7);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff4d4d;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #5ad2ed;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff3333;
+            transform: translateY(-3px);
+        }
+
+        .features {
+            padding: 100px 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+            margin: 50px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.207);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">游戏名称</div>
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#features">游戏介绍</a></li>
+                <li><a href="https://www.ccw.site/detail/68932897d194795c29627aea">跳转到ccw游戏链接</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>欢迎来到游戏世界</h1>
+        <p>体验前所未有的游戏乐趣，探索神秘的虚拟世界，与全球玩家一起冒险。</p>
+        <a href="https://www.ccw.site/detail/68932897d194795c29627aea" class="btn">立即启动</a>
+    </section>
+
+    <section class="features" id="features">
+        <h2>游戏介绍</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>精美画面</h3>
+                <p>水墨画风+简约画风，非常的NB。</p>
+            </div>
+            <div class="feature-card">
+                <h3>剧情简介</h3>
+                <p>跌宕起伏的故事情节🤔</p><br />
+                <p>吴梓文木琴被抓走到地府了，吴梓文愤怒了，整天打坐练功，最终打倒地府
+            </div>
+            <div class="feature-card">
+                <h3>多人联机</h3>
+                <p>与各地同志PVP。</p>
+            </div>
+        </div>
+    </section>
+    <section class="hero" id="hero">
+        <a href="https://qm.qq.com/q/YMTRaVSJG2">加入我们</a>
+    </section>
+    <footer>
+        <a href="https://qm.qq.com/q/YMTRaVSJG2">©共创世界乐子讨论协会 2025</a>
+    </footer>
+</body>
+</html>
